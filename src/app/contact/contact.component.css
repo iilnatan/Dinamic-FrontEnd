@@ -1,0 +1,46 @@
+.body {
+    width: 100%;
+    height: 100vh;
+}
+.contact {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px 100px;
+}
+.contact:after{
+    /* content: ''; */
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.contact-box{
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.left{
+    height: 100%;
+    border: 2px solid black;
+
+}
+.right{
+    padding: 25px 40px;
+}
+.field{
+    width: 100%;
+    padding: 0.5rem 1rem;
+    outline: none;
+    border: 2px solid rgba(0, 0, 0, 0);
+    font-size: 1.1rem;
+    margin-bottom: 22px;
+    transition: .3;
+}

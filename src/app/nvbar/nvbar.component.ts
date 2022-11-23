@@ -18,9 +18,14 @@ export class NvbarComponent implements OnInit {
     Linkedin:String="../img/medias/linkedin.png"
     Instagram:String="../img/medias/instagram.png"
     Twitter:String="../img/medias/twitter.png"
+
+    nav:any = document.querySelector(".navbar");
+    
+    
   
 
   ngOnInit(): void {
+    
   }
 
 }

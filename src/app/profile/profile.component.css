@@ -1,0 +1,61 @@
+.seccion-perfil-usuario {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    font-size: 50px;
+}
+.seccion-perfil-usuario .perfil-usuario-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.seccion-perfil-usuario .perfil-usuario-portada, .banner {
+    display: block;
+    position:relative;
+    width: 80%;
+    height: 17rem;
+    background: linear-gradient(3deg,  #67326F,#674a6b);
+    border-radius: 0 0 20px 20px;
+    bottom:75px;
+    
+}
+.seccion-perfil-usuario .perfil-usuario-avatar .avatar {
+    width: 100%;
+    position: relative;
+}
+.seccion-perfil-usuario .perfil-usuario-avatar {
+    display: flex;
+    width: 180px;
+    height: 180px;
+    align-items: center;
+    border: 7px solid #ffffff;
+    background-color: #9E8286;
+    border-radius: 50%;
+    box-shadow: 0 0 12px  rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: -50px;
+    left:calc(50% - 90px);
+    overflow: hidden;
+}
+
+
+.seccion-perfil-usuario .perfil-usuario-body {
+    width: 80%;
+    margin-top: 50px;
+}
+.seccion-perfil-usuario .perfil-usuario-bio {
+    display: block;
+    padding: 1rem;
+    margin: 20px;
+    box-shadow: 0 0 12px  rgba(0, 0, 0, 0.2);
+    font-size: 2rem;
+    border-radius: 3%;
+    background-color: #CABACB;
+}
+.seccion-perfil-usuario .perfil-usuario-bio .titulo {
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}

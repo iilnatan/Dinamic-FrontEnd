@@ -1,0 +1,17 @@
+div {
+    font-size: 50px;
+}
+div .hi{
+    font-size: 0.9rem;
+    font-weight:bold;
+    color: #CABACB;
+}
+div .name {
+    font-size: 4rem;
+    font-weight: bolder;
+    color: #FFF2FE;
+}
+div .description {
+    color: #CABACB
+
+} 

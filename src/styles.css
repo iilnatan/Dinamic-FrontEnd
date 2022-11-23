@@ -2,6 +2,9 @@
     padding: 0;
     margin: 0;
     font-family: 'Roboto Mono', monospace;
-    background-color: #604B65;
+}
 
-} 
+body{
+    background: #604B65;
+
+}
