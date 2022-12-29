@@ -3,8 +3,10 @@
     margin: 0;
     font-family: 'Roboto Mono', monospace;
 }
-
 body{
     background: #604B65;
-
+}
+body::-webkit-scrollbar{
+    display: none;
+    
 }
