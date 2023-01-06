@@ -8,15 +8,15 @@ import { PersonaService } from '../service/persona.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  /* persona: persona = new persona("","",""); */
+  persona: persona = new persona("","","");
 
- /*  constructor(public personaService: PersonaService) { } */
+  constructor(public personaService: PersonaService) { }
   Avatar:String="../img/profile/avatar.jpg"
   Banner:String="../img/profile/imgRan.jpg"
   Nombre:String="Marco Natan Buffa"
 
   ngOnInit(): void {
-    /* this.personaService.getPersona().subscribe(data => (this.persona = data)) */
+    this.personaService.getPersona().subscribe(data => (this.persona = data))
   }
 
 }

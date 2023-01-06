@@ -15,9 +15,8 @@
         <button routerLink="/contact"class="navbar-toggler" type="button">
           <img [src]="Contact" alt="" height="30px">
         </button>
-        <button routerLink="/login"class="navbar-toggler Login" type="button">
-          <p class="Login">Login</p>
-        </button>
+        <button class="navbar-toggler Login" type="button" (click)="login()" *ngIf="isNotLogged">Login</button>
+        <button class="navbar-toggler Login" type="button" (click)="onLogOut()" *ngIf="isLogged">LogOut</button>
       </div>
     </nav>
       <div class="container-medias">

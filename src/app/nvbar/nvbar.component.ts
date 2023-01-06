@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, withDisabledInitialNavigation } from '@angular/router';
+import { TokenService } from '../service/token.service';
 
 @Component({
   selector: 'app-nvbar',
@@ -6,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nvbar.component.css']
 })
 export class NvbarComponent implements OnInit {
+  isLogged= false;
+  isNotLogged=false;
 
-  constructor() { }
+  constructor(private router:Router, private tokenService: TokenService) { }
     //navbar
     ArgProg:String= "../img/navbar/ArgProgIcon.png"
     Home:String= "../img/navbar/Home.png"
@@ -25,7 +29,18 @@ export class NvbarComponent implements OnInit {
   
 
   ngOnInit(): void {
-    
+    if(this.tokenService.getToken()){
+      this.isLogged=true;
+    } else {
+      this.isNotLogged=true;
+    }
+  }
+  onLogOut():void{
+    this.tokenService.logOut();
+    window.location.reload();
+  }
+  login(){
+    this.router.navigate(['/login'])
   }
 
 }

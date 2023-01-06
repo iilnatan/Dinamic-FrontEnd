@@ -13,6 +13,9 @@ import { HardComponent } from './profile/hard/hard.component';
 import { ProyectosComponent } from './profile/proyectos/proyectos.component';
 import { LoginComponent } from './login/login.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http'
+import { FormsModule } from '@angular/forms';
+import { NuevaExpComponent } from './profile/experiencia/nueva-exp/nueva-exp.component';
+import { EditarComponent } from './profile/experiencia/editar.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +28,15 @@ import {HttpClient, HttpClientModule} from '@angular/common/http'
     EducacionComponent,
     HardComponent,
     ProyectosComponent,
-    LoginComponent
+    LoginComponent,
+    NuevaExpComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
