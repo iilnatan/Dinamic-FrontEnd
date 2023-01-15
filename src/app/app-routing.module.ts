@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { CorregirperfilComponent } from './profile/corregirperfil.component';
 import { EducacionComponent } from './profile/educacion/educacion.component';
 import { EditarComponent } from './profile/experiencia/editar.component';
 import { ExperienciaComponent } from './profile/experiencia/experiencia.component';
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path:'proyectos', component:ProyectosComponent},
   {path:'login', component:LoginComponent},
   {path:'nuevaexp', component:NuevaExpComponent},
-  {path:'editarexp/:id', component:EditarComponent}
+  {path:'editarexp/:id', component:EditarComponent},
+  {path:'corregir/:id', component:CorregirperfilComponent}
  ];
 
 

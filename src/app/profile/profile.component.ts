@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { persona } from '../model/persona.model';
 import { PersonaService } from '../service/persona.service';
+import { TokenService } from '../service/token.service';
 
 @Component({
   selector: 'app-profile',
@@ -8,15 +9,24 @@ import { PersonaService } from '../service/persona.service';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  persona: persona = new persona("","","");
+  persona: persona = new persona("","","","");
 
-  constructor(public personaService: PersonaService) { }
-  Avatar:String="../img/profile/avatar.jpg"
-  Banner:String="../img/profile/imgRan.jpg"
-  Nombre:String="Marco Natan Buffa"
-
+  constructor(public personaService: PersonaService, private tokenService: TokenService) { }
+  isLogged = false;
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data => (this.persona = data))
+    this.cargarPersona();
+    if (this.tokenService.getToken()) {
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
+  }
+
+  cargarPersona(){
+    this.personaService.detail(1).subscribe(data =>
+      {
+        this.persona = data
+      })
   }
 
 }

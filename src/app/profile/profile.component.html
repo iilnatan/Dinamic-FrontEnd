@@ -4,24 +4,26 @@
             <div class="perfil-usuario-portada">
                 <!-- <img [src]="Banner" class="banner" alt=""> -->
                 <div class="perfil-usuario-avatar">
-                    <img [src]="Avatar" alt="avatar" class="avatar">
+                    <img src={{persona.img}} alt="avatar" class="avatar">
                 </div>
             </div> 
         </div>
         <!-- buttons in progress -->
-<!--         <div>
-            <button class="buttons" routerLink="educacion">educacion</button>
-            <button class="buttons" routerLink="experiencia">experiencia</button>
-            <button class="buttons" routerLink="hard&soft">hard</button>
-            <button class="buttons" routerLink="proyectos">proyectos</button>
+        <div>
+            <button class="buttons" routerLink="/educacion">educacion</button>
+            <button class="buttons" routerLink="/experiencia">experiencia</button>
+            <button class="buttons" routerLink="/hard&soft">hard</button>
+            <button class="buttons" routerLink="/proyectos">proyectos</button>
         </div>
- -->        <div class="perfil-usuario-body">
+        <div class="perfil-usuario-body">
+            <div class="col-lg-2">
+                <button type="button" class="btn btn-dark" routerLink="/corregir/1" *ngIf="isLogged">
+                    Corregir
+                </button>
+            </div>
             <div class="perfil-usuario-bio">
                 <h1 class="titulo">{{persona.nombre}} {{persona.apellido}}</h1>
-                <p class="texto">Joven interesado en las areas de la computacion y con gran manejo de ellas. Sin problemas en lo social, se amoldarme al ambiente y a mi responsabilidad. No me cuenta aprender, me gusta mucho adquirir conocimiento, el estudio y trabajar/esforzarme por mis intereses.</p>
-                <p class="texto">Me responsabilizo por mis actos y actuo con cautela.</p>
-                <p class="texto">Soy organizado, busco ser cuidadoso con mi area y elementos de trabajo.</p>
-                <p class="texto">Siempre dispuesto a aprender y escuchar.</p>
+                {{persona.descripcion}}
             </div>
             <div class="perfil-usuario-bio">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero impedit quos odit aut cum veniam, ab dicta eos eius illum harum excepturi laudantium delectus voluptatem! Debitis labore cupiditate iste repellendus.</div>
             <div class="perfil-usuario-bio">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat maxime culpa similique fugiat sit, praesentium, cum porro quisquam omnis dicta, asperiores id eligendi nesciunt libero iste totam? Est, doloribus molestias.</div>

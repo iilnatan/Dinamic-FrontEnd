@@ -8,12 +8,18 @@ import { PersonaService } from '../service/persona.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  persona: persona=new persona("","",""); 
+  persona: persona = new persona("","","","");
   
   constructor(public personaService: PersonaService) { }
 
   ngOnInit(): void {
-    this.personaService.getPersona().subscribe(data   => {this.persona = data})
+    this.cargarPersona();
   }
 
+  cargarPersona(){
+    this.personaService.detail(1).subscribe(data =>
+      {
+        this.persona = data
+      })
+  }
 }

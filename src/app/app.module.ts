@@ -16,6 +16,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { NuevaExpComponent } from './profile/experiencia/nueva-exp/nueva-exp.component';
 import { EditarComponent } from './profile/experiencia/editar.component';
+import { CorregirperfilComponent } from './profile/corregirperfil.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { EditarComponent } from './profile/experiencia/editar.component';
     ProyectosComponent,
     LoginComponent,
     NuevaExpComponent,
-    EditarComponent
+    EditarComponent,
+    CorregirperfilComponent
   ],
   imports: [
     BrowserModule,
