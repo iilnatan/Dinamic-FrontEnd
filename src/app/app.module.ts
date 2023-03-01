@@ -17,6 +17,14 @@ import { FormsModule } from '@angular/forms';
 import { NuevaExpComponent } from './profile/experiencia/nueva-exp/nueva-exp.component';
 import { EditarComponent } from './profile/experiencia/editar.component';
 import { CorregirperfilComponent } from './profile/corregirperfil.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { EditarHComponent } from './profile/hard/editar-h.component';
+import { CrearHComponent } from './profile/hard/crear-h.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+
 
 @NgModule({
   declarations: [
@@ -32,13 +40,19 @@ import { CorregirperfilComponent } from './profile/corregirperfil.component';
     LoginComponent,
     NuevaExpComponent,
     EditarComponent,
-    CorregirperfilComponent
+    CorregirperfilComponent,
+    EditarHComponent,
+    CrearHComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage()),
+    NgCircleProgressModule.forRoot({}),
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

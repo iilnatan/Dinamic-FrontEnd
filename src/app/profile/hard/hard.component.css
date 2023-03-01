@@ -1,0 +1,6 @@
+.titulo {
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}

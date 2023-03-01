@@ -1,33 +1,31 @@
 <div>
     <div class="seccion-perfil-usuario">
         <div class="perfil-usuario-header">
+            
             <div class="perfil-usuario-portada">
                 <!-- <img [src]="Banner" class="banner" alt=""> -->
                 <div class="perfil-usuario-avatar">
                     <img src={{persona.img}} alt="avatar" class="avatar">
                 </div>
+                <button type="button" class="banner-button" *ngIf="isLogged">Cambiar banner</button>
             </div> 
         </div>
-        <!-- buttons in progress -->
-        <div>
-            <button class="buttons" routerLink="/educacion">educacion</button>
-            <button class="buttons" routerLink="/experiencia">experiencia</button>
-            <button class="buttons" routerLink="/hard&soft">hard</button>
-            <button class="buttons" routerLink="/proyectos">proyectos</button>
-        </div>
-        <div class="perfil-usuario-body">
-            <div class="col-lg-2">
-                <button type="button" class="btn btn-dark" routerLink="/corregir/1" *ngIf="isLogged">
-                    Corregir
-                </button>
-            </div>
+          <div class="perfil-usuario-body">
             <div class="perfil-usuario-bio">
                 <h1 class="titulo">{{persona.nombre}} {{persona.apellido}}</h1>
+                <div class="col-lg-2">
+                    <button type="button" class="btn btn-dark" routerLink="/corregir/1" *ngIf="isLogged">
+                        Corregir
+                    </button>
+                </div>
                 {{persona.descripcion}}
             </div>
-            <div class="perfil-usuario-bio">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero impedit quos odit aut cum veniam, ab dicta eos eius illum harum excepturi laudantium delectus voluptatem! Debitis labore cupiditate iste repellendus.</div>
-            <div class="perfil-usuario-bio">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat maxime culpa similique fugiat sit, praesentium, cum porro quisquam omnis dicta, asperiores id eligendi nesciunt libero iste totam? Est, doloribus molestias.</div>
-            <div class="perfil-usuario-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non amet blanditiis quod tempore ipsa, expedita sit impedit fuga asperiores et ipsam soluta eaque, necessitatibus, reprehenderit consequatur? Qui voluptas maxime ullam?</div>
-        </div>
+            <div class="perfil-usuario-bio">
+                <app-experiencia></app-experiencia>
+            </div>
+            <div class="perfil-usuario-bio">
+                <app-hard></app-hard>
+            </div>
+         </div>
     </div>
 </div>

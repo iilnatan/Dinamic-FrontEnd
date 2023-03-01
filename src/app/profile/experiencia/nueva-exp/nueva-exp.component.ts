@@ -21,7 +21,7 @@ export class NuevaExpComponent implements OnInit {
     this.sExperiencia.save(expe).subscribe(
       data => {
         alert("Experiencia añadida");
-        this.router.navigate(['experiencia']);
+        this.router.navigate(['profile']);
       }, err => {
         alert("Falló");
         this.router.navigate(['']);
