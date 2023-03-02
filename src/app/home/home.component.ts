@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   persona: persona = new persona("","","","");
   
   constructor(public personaService: PersonaService) { }
-
+  
   ngOnInit(): void {
     this.cargarPersona();
   }
@@ -21,5 +21,7 @@ export class HomeComponent implements OnInit {
       {
         this.persona = data
       })
+
+
   }
 }

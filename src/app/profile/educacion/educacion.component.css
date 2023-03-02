@@ -1,0 +1,20 @@
+.titulo {
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+.tabla {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 20px;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.tabla tbody tr {
+    border-bottom: 2px solid black;
+}
+.nombre{
+    border-right: 2px solid black;
+}

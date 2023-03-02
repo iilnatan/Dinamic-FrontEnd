@@ -44,10 +44,17 @@
     margin-top: 200px;
     width: 10%;
     justify-items: center;
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    right: auto;
+    z-index: 10;
+    color: var(--light-slate);
 }
 
 ul {
     list-style: none;
+    display: block;
 }
 li{
     margin-bottom: 25px

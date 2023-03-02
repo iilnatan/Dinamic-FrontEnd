@@ -24,6 +24,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { EditarHComponent } from './profile/hard/editar-h.component';
 import { CrearHComponent } from './profile/hard/crear-h.component';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { NuevaedComponent } from './profile/educacion/nuevaed.component';
+import { EditarEdComponent } from './profile/educacion/editar-ed.component';
 
 
 @NgModule({
@@ -42,7 +44,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
     EditarComponent,
     CorregirperfilComponent,
     EditarHComponent,
-    CrearHComponent
+    CrearHComponent,
+    NuevaedComponent,
+    EditarEdComponent
   ],
   imports: [
     BrowserModule,

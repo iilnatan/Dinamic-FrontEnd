@@ -4,7 +4,9 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { CorregirperfilComponent } from './profile/corregirperfil.component';
+import { EditarEdComponent } from './profile/educacion/editar-ed.component';
 import { EducacionComponent } from './profile/educacion/educacion.component';
+import { NuevaedComponent } from './profile/educacion/nuevaed.component';
 import { EditarComponent } from './profile/experiencia/editar.component';
 import { ExperienciaComponent } from './profile/experiencia/experiencia.component';
 import { NuevaExpComponent } from './profile/experiencia/nueva-exp/nueva-exp.component';
@@ -28,7 +30,10 @@ const routes: Routes = [
   {path:'editarexp/:id', component:EditarComponent},
   {path:'corregir/:id', component:CorregirperfilComponent},
   {path:'editarH/:id', component:EditarHComponent},
-  {path:'crearH', component:CrearHComponent}
+  {path:'crearH', component:CrearHComponent},
+  {path:'editared/:id', component:EditarEdComponent},
+  {path:'creared', component:NuevaedComponent}
+
  ];
 
 

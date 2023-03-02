@@ -13,9 +13,9 @@
                 </td>
                 <td>{{Experiencia.descripcionE}}</td>
                 <td *ngIf="isLogged">
-                    <button routerLink="/editarexp/{{Experiencia.id}}">Modificar</button>
+                    <button routerLink="/editarexp/{{Experiencia.id}}" class="btn btn-dark">Modificar</button>
                 </td>
-                <td *ngIf="isLogged"><button (click)="delete(Experiencia.id)">Eliminar</button></td>
+                <td *ngIf="isLogged"><button (click)="delete(Experiencia.id)" class="btn btn-dark">Eliminar</button></td>
             </tr>
         </tbody>
     </table>
